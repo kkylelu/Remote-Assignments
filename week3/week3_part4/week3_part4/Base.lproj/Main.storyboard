@@ -274,6 +274,11 @@
                             <constraint firstItem="W7G-NX-81h" firstAttribute="centerY" secondItem="9Qw-fa-tzy" secondAttribute="centerY" id="uBr-jL-Zgc"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="signUpAccountTextField" destination="Uko-5w-kr6" id="DuA-Ri-gVo"/>
+                        <outlet property="signUpCheckTextField" destination="wSu-gw-U8G" id="Esl-TE-aIW"/>
+                        <outlet property="signUpPasswordTextField" destination="qgV-x3-ae7" id="Ae6-wJ-0EU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cfi-KK-1y0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

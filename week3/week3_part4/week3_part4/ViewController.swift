@@ -10,6 +10,7 @@ import UIKit
 class ViewController: UIViewController {
     
     var loginViewController: loginViewController?
+    var signupViewController: signupViewController?
     
     @IBOutlet weak var changeStatusOutlet: UISegmentedControl!
     
@@ -24,25 +25,21 @@ class ViewController: UIViewController {
         // 被選中的文字是白色
         changeStatusOutlet.setTitleTextAttributes([.foregroundColor: UIColor.white], for: .selected)
     }
-    
-     
-    
+         
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         // 這裡要放 function 因此把設定外觀獨立為 function，作為初始畫面
         changeStatusAppearance()
-        
-            
             self.view.bringSubviewToFront(loginContainer)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let loginVC = segue.destination as? loginViewController {
             self.loginViewController = loginVC
+        }else if let signupVC = segue.destination as? signupViewController {
+            self.signupViewController = signupVC
         }
     }
-
     
     @IBAction func changeStatus(_ sender: UISegmentedControl) {
         
@@ -58,7 +55,6 @@ class ViewController: UIViewController {
         
     }
     
-    
     @IBOutlet weak var loginContainer: UIView!
     @IBOutlet weak var signUpContainer: UIView!
     
@@ -73,25 +69,29 @@ class ViewController: UIViewController {
         case 0 : // Log in
             if let loginVC = loginViewController {
                 // 用 if let 避免 app 閃退
-               let success = loginVC.loginTapped()
+                let success = loginVC.loginTapped()
                 if success {
                     print("Login!")
                 } else {
-                    print("Login fail")                    
+                    print("Login fail")
                 }
             }
         case 1: // Sign up
-            print("sign up")
+            if let signupVC = signupViewController {
+                // 用 if let 避免 app 閃退
+                let success = signupVC.signupButtonTapped()
+                if success {
+                    print("sign up")
+                } else {
+                    print("signup fail")
+                }
+            }
             
         default :
             break
         }
-        
-        
     }
     
-    
-
 }
 
     
