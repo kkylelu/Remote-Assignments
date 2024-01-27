@@ -19,6 +19,7 @@ class signupViewController: UIViewController {
     case accountIsEmptyProblem
     case passwordIsEmptyProblem
     case checkIsEmptyProblem
+    case validateProblem
     }
     
     func signupErrorFunc() throws {
@@ -31,6 +32,11 @@ class signupViewController: UIViewController {
         guard let checkText = signUpCheckTextField.text, !checkText.isEmpty else {
             throw signupError.checkIsEmptyProblem
         }
+        guard signUpCheckTextField.text == signUpPasswordTextField.text else {
+            throw signupError.validateProblem
+        }
+        // guard 檢查條件為真，否則丟 Error
+        // guard let 用來解包 optional，有則傳給常數，否則丟 Error
     }
     
     func signupButtonTapped() -> Bool {
@@ -47,6 +53,8 @@ class signupViewController: UIViewController {
                 errorMessage = "Password should not be empty."
             case .checkIsEmptyProblem:
                 errorMessage = "Check Password should not be empty."
+            case .validateProblem:
+                errorMessage = "Sign up fail"
             }
 
             // 出現警告視窗

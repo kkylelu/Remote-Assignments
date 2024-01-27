@@ -14,25 +14,37 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var changeStatusOutlet: UISegmentedControl!
     
-
-    func changeStatusAppearance()  {
-        // 外觀
-        // 外框為黑色
-        changeStatusOutlet.layer.borderColor = UIColor.black.cgColor
-        changeStatusOutlet.layer.borderWidth = 1
-        
-        changeStatusOutlet.selectedSegmentTintColor = .black
-        // 被選中的文字是白色
-        changeStatusOutlet.setTitleTextAttributes([.foregroundColor: UIColor.white], for: .selected)
-    }
          
     override func viewDidLoad() {
         super.viewDidLoad()
-        // 這裡要放 function 因此把設定外觀獨立為 function，作為初始畫面
-        changeStatusAppearance()
-            self.view.bringSubviewToFront(loginContainer)
+        
+        // segment control 外觀設定
+        
+        // 外框為黑色
+        changeStatusOutlet.layer.borderColor = UIColor.black.cgColor
+        changeStatusOutlet.layer.borderWidth = 1
+        self.view.bringSubviewToFront(loginContainer)
+        
+        // 沒被選中的背景為白色圖片
+        let whiteBackgroundImage = UIImage(color: .white, size: CGSize(width: 1, height: 32))
+        changeStatusOutlet.setBackgroundImage(whiteBackgroundImage, for: .normal, barMetrics: .default)
+        changeStatusOutlet.setBackgroundImage(whiteBackgroundImage, for: .selected, barMetrics: .default)
+        
+        // 選中的背景色為黑色
+        let blackBackgroundImage = UIImage(color: .black, size: CGSize(width: 1, height: 32))
+        changeStatusOutlet.setBackgroundImage(blackBackgroundImage, for: .selected, barMetrics: .default)
+        
+        // 沒被點選的文字為黑色
+        let normalTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black]
+        changeStatusOutlet.setTitleTextAttributes(normalTextAttributes, for: .normal)
+        
+        // 被點選的文字為白色
+        let selectedTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        changeStatusOutlet.setTitleTextAttributes(selectedTextAttributes, for: .selected)
+        
     }
     
+    // 將 logincontroller 資料傳過來
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let loginVC = segue.destination as? loginViewController {
             self.loginViewController = loginVC
@@ -94,5 +106,17 @@ class ViewController: UIViewController {
     
 }
 
-    
+// iOS13 之後要用 Extension 產生白色背景圖片給 segment control
+extension UIImage {
+    convenience init?(color: UIColor, size: CGSize) {
+        let rect = CGRect(origin: .zero, size: size)
+        UIGraphicsBeginImageContextWithOptions(rect.size, false, 1.0)
+        color.setFill()
+        UIRectFill(rect)
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        guard let cgImage = image?.cgImage else { return nil }
+        self.init(cgImage: cgImage)
+    }
+}
 
