@@ -85,7 +85,8 @@ class ViewController: UIViewController {
                 if success {
                     print("Login!")
                 } else {
-                    print("Login fail")
+                    showAlert(message: "Login fail")
+                    
                 }
             }
         case 1: // Sign up
@@ -104,6 +105,11 @@ class ViewController: UIViewController {
         }
     }
     
+    func showAlert(message: String) {
+        let alert = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Sure", style: .default, handler: nil))
+        present(alert, animated: true)
+    }
 }
 
 // iOS13 之後要用 Extension 產生白色背景圖片給 segment control

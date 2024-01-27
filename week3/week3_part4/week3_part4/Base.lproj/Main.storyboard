@@ -16,25 +16,43 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="omL-Ry-aTM" userLabel="Label View">
-                                <rect key="frame" x="43.993463768888205" y="138.99999999999261" width="302.99999999995975" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="AppWorks School" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WeC-56-DeA">
-                                        <rect key="frame" x="0.10340825506921192" y="0.39915916287111486" width="303" height="48"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HyM-Ca-Z1U" userLabel="Segment View">
-                                <rect key="frame" x="121.33333333333333" y="232" width="150" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AppWorks School" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WeC-56-DeA">
+                                <rect key="frame" x="45" y="139" width="303" height="89"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cc1-PM-bgj" userLabel="Log in Container View">
+                                <rect key="frame" x="69" y="370" width="255" height="125"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="255" id="VE6-OU-OC6"/>
+                                    <constraint firstAttribute="width" constant="255" id="bvh-ni-mgy"/>
+                                    <constraint firstAttribute="height" constant="125" id="cTu-aY-hVh"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="125" id="j7O-gO-dUw"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="j6H-9y-DN4" kind="embed" id="GWG-OR-LoN"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2ZC-yE-b8b" userLabel="Sign up Container View">
+                                <rect key="frame" x="69" y="370" width="255" height="125"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="125" id="6kV-1Q-uy0"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="255" id="70A-u0-CHF"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="125" id="Jpk-TE-Eu8"/>
+                                    <constraint firstAttribute="width" constant="255" id="a58-9b-g6g"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="5oX-HL-zOu" kind="embed" id="6lO-S6-UIA"/>
+                                </connections>
+                            </containerView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HyM-Ca-Z1U" userLabel="Segment View">
+                                <rect key="frame" x="121" y="298" width="151" height="32"/>
                                 <subviews>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="GC5-tJ-W7y">
-                                        <rect key="frame" x="-0.33333333333331439" y="-1" width="150.0000000000199" height="32"/>
+                                        <rect key="frame" x="-0.15068186681037332" y="-1" width="150.00000000001955" height="32"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <segments>
                                             <segment title="Log in"/>
@@ -47,41 +65,48 @@
                                     </segmentedControl>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="486-54-gMe"/>
+                                    <constraint firstAttribute="width" constant="150" id="Fa0-gs-n91"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="iRy-v4-Zkd"/>
+                                </constraints>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rOi-HO-3Hl">
-                                <rect key="frame" x="81.423902692060324" y="561.99999999997021" width="229.00000000000011" height="34.999999999995225"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="dgu-h3-S1R">
+                                <rect key="frame" x="79" y="545" width="235" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dgu-h3-S1R">
-                                        <rect key="frame" x="-1.1697012163449472" y="0.96428610145898119" width="229" height="35"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" title="Button"/>
-                                        <connections>
-                                            <action selector="mainButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hbh-b3-I2y"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </view>
-                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cc1-PM-bgj" userLabel="Log in Container View">
-                                <rect key="frame" x="69" y="363" width="255" height="125"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Button"/>
                                 <connections>
-                                    <segue destination="j6H-9y-DN4" kind="embed" id="GWG-OR-LoN"/>
+                                    <action selector="mainButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hbh-b3-I2y"/>
                                 </connections>
-                            </containerView>
-                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2ZC-yE-b8b" userLabel="Sign up Container View">
-                                <rect key="frame" x="69" y="363" width="255" height="125"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <connections>
-                                    <segue destination="5oX-HL-zOu" kind="embed" id="6lO-S6-UIA"/>
-                                </connections>
-                            </containerView>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WeC-56-DeA" secondAttribute="trailing" constant="45" id="0cs-n7-SWS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="HyM-Ca-Z1U" secondAttribute="trailing" constant="121" id="6il-bW-aZu"/>
+                            <constraint firstItem="dgu-h3-S1R" firstAttribute="top" secondItem="cc1-PM-bgj" secondAttribute="bottom" constant="50" id="6os-ZV-nVI"/>
+                            <constraint firstItem="2ZC-yE-b8b" firstAttribute="centerX" secondItem="cc1-PM-bgj" secondAttribute="centerX" id="Bj3-EV-Hpi"/>
+                            <constraint firstItem="cc1-PM-bgj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="C8t-9h-ayb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2ZC-yE-b8b" secondAttribute="trailing" constant="69" id="F0K-mw-OcT"/>
+                            <constraint firstItem="2ZC-yE-b8b" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="69" id="JJV-wH-PnH"/>
+                            <constraint firstItem="HyM-Ca-Z1U" firstAttribute="top" secondItem="WeC-56-DeA" secondAttribute="bottom" constant="70" id="JYd-5u-QTi"/>
+                            <constraint firstItem="cc1-PM-bgj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="69" id="Jdq-3L-wc1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cc1-PM-bgj" secondAttribute="trailing" constant="69" id="PUZ-uj-mJl"/>
+                            <constraint firstItem="dgu-h3-S1R" firstAttribute="top" secondItem="2ZC-yE-b8b" secondAttribute="bottom" constant="50" id="QOw-kX-Wza"/>
+                            <constraint firstItem="2ZC-yE-b8b" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SdD-fI-OuI"/>
+                            <constraint firstItem="cc1-PM-bgj" firstAttribute="top" secondItem="HyM-Ca-Z1U" secondAttribute="bottom" constant="40" id="W2D-X0-Uth"/>
+                            <constraint firstItem="HyM-Ca-Z1U" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="121" id="b9U-3g-SWN"/>
+                            <constraint firstItem="HyM-Ca-Z1U" firstAttribute="top" secondItem="WeC-56-DeA" secondAttribute="bottom" constant="70" id="iTf-Uz-fyx"/>
+                            <constraint firstItem="HyM-Ca-Z1U" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nNK-UU-PnE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="HyM-Ca-Z1U" secondAttribute="trailing" constant="121" id="noO-0d-Pb1"/>
+                            <constraint firstItem="WeC-56-DeA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="45" id="oXZ-Cf-cFA"/>
+                            <constraint firstItem="HyM-Ca-Z1U" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="121" id="oia-MF-mrZ"/>
+                            <constraint firstItem="WeC-56-DeA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="80" id="rJA-YB-hOv"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="changeStatusOutlet" destination="GC5-tJ-W7y" id="qBp-e6-YLm"/>
