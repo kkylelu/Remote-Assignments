@@ -15,23 +15,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="R16" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O0a-J1-J1n" userLabel="StationID Label">
-                                <rect key="frame" x="16" y="199" width="361" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R16" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O0a-J1-J1n" userLabel="StationID Label">
+                                <rect key="frame" x="16" y="199" width="361" height="44"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Zuoying" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WKz-mR-x9u" userLabel="StationName Label">
-                                <rect key="frame" x="16" y="305" width="361" height="96"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zuoying" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WKz-mR-x9u" userLabel="StationName Label">
+                                <rect key="frame" x="16" y="278" width="361" height="96"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="80"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="高雄市左營區高鐵路107號地下一層" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uX9-u8-a3C" userLabel="Address Label">
-                                <rect key="frame" x="16" y="586" width="361" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="高雄市左營區高鐵路107號地下一層" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uX9-u8-a3C" userLabel="Address Label">
+                                <rect key="frame" x="16" y="630.33333333333337" width="361" height="21.666666666666629"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -39,6 +36,20 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="1" green="0.57579934600000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="O0a-J1-J1n" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="140" id="9MQ-gR-5Tb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="uX9-u8-a3C" secondAttribute="trailing" constant="16" id="AL6-Ds-G0e"/>
+                            <constraint firstItem="uX9-u8-a3C" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="CZt-rm-xsU"/>
+                            <constraint firstItem="WKz-mR-x9u" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-100" id="HOJ-88-yeE"/>
+                            <constraint firstItem="O0a-J1-J1n" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Pa2-kk-cyh"/>
+                            <constraint firstItem="O0a-J1-J1n" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RaM-OG-93d"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WKz-mR-x9u" secondAttribute="trailing" constant="16" id="Uf8-jI-OBQ"/>
+                            <constraint firstItem="WKz-mR-x9u" firstAttribute="top" secondItem="O0a-J1-J1n" secondAttribute="bottom" constant="35" id="eqH-JE-QMJ"/>
+                            <constraint firstItem="WKz-mR-x9u" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="l6l-3Q-syw"/>
+                            <constraint firstItem="uX9-u8-a3C" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="m8i-rX-Lmv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="O0a-J1-J1n" secondAttribute="trailing" constant="16" id="n7N-bb-Wxs"/>
+                            <constraint firstAttribute="bottom" secondItem="uX9-u8-a3C" secondAttribute="bottom" constant="200" id="u7r-bF-iud"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="AddressLabel" destination="uX9-u8-a3C" id="3Ed-sV-kf6"/>
