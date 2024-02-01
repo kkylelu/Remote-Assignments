@@ -40,3 +40,13 @@ class TableViewController: UITableViewController {
 
 }
 
+/*
+ # 2. There are several methods defined in the UITableViewDataSource protocol. Which methods are called by the system after we manually call reloadData() of a table view and what are their sequences? Please describe in as much detail as possible.
+ 
+ 系統會按照順序呼叫 sections, rows 和 cell ，假設要做個檔案管理 APP，舉例如下：
+ 1. numberOfSections(in:) ：決定表格有幾個區塊，例如有照片、影片、文件等區塊。
+ 2. numberOfRowsInSection ：決定每個區塊有幾行，例如照片有 10 行，文件有 5 行。
+ 3. cellForRowAt：決定每一行有多少單元格，例如有縮圖和名稱。
+ 
+ 
+ */
