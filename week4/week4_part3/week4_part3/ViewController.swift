@@ -28,13 +28,13 @@ class ViewController: UIViewController {
     
     func fetchData() {
         if let url = URL(string: "https://remote-assignment.s3.ap-northeast-1.amazonaws.com/station") {
-            URLSession.shared.dataTask(with: url) { [weak self] data, response , error in
+            URLSession.shared.dataTask(with: url) { data, response , error in
                 if let data = data {
                     let decoder = JSONDecoder()
                     do {
                         let thsrStation = try decoder.decode(Thsr.self, from: data)
                                             DispatchQueue.main.async {
-                                                self?.updateUI(with: thsrStation)
+                                                self.updateUI(with: thsrStation)
                                             }
                     } catch {
                         print(error)
